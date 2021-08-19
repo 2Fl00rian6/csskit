@@ -1,0 +1,185 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Georama:wght@300&family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Georama:wght@300&display=swap');
+
+/*!
+* CSSKit v1.0.0 (https://csskit.fr)
+* Copyright 2021-2021 The CSSKit Authors
+* Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+*/
+
+:root {
+  --csskit-blue-form: #1a76d3;
+  --csskit-blue-checkbox: #2196F3;
+  --csskit-darkblue-focus: rgba(0, 119, 255, 0.322);
+}
+
+.cssk-container {
+    background-color: rgb(251, 251, 251);
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+}
+
+.cssk-small {
+    width: 50%;
+}
+
+.cssk-center {
+  margin-top: 250px;
+}
+
+.cssk-form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.cssk-form-check {
+    margin: 20px;
+}
+
+.cssk-form-label {
+    font-family: 'Poppins', sans-serif;
+    color: #212529;
+    margin-bottom: 10px;
+}
+
+.cssk-form-check-label {
+    font-family: 'Poppins', sans-serif;
+    color: #212529;
+    margin-bottom: 10px;
+}
+
+.cssk-form-input {
+    color: #212529;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 8px 13px;
+    font-size: 17px;
+    transition: .3s;
+}
+
+.cssk-form-input:focus {
+    outline: none;
+    border: 1px solid var(--csskit-blue-form);
+    box-shadow: 0px 0px 0px 5px var(--csskit-darkblue-focus);
+}
+
+/* RADIO start */
+
+.cssk-form-check-label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.cssk-form-check-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.cssk-form-checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 3px;
+  background-color: #eee;
+  transition: .4s;
+}
+
+.cssk-form-check-label:hover input ~ .cssk-form-checkbox {
+  background-color: #ccc;
+}
+
+.cssk-form-check-label input:checked ~ .cssk-form-checkbox {
+  background-color: var(--csskit-blue-checkbox);
+}
+
+.cssk-form-checkbox:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.cssk-form-check-label input:checked ~ .cssk-form-checkbox:after {
+  display: block;
+}
+
+.cssk-form-check-label .cssk-form-checkbox:after {
+  left: 7px;
+  top: 4px;
+  width: 3px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* RADIO end */
+
+.cssk-form-btn {
+    background-color: var(--csskit-blue-form);
+    border: 1px solid var(--csskit-blue-form);
+    border-radius: 5px;
+    padding: 8px 13px;
+    color: #dadada;
+    font-size: 17px;
+    transition: .3s;
+    width: 10%;
+}
+
+.cssk-form-btn:hover {
+    background-color: transparent;
+    border: 1px solid var(--csskit-blue-form);
+    color: var(--csskit-blue-form);
+}
+
+.cssk-form-btn:focus {
+    outline: none;
+    box-shadow: 0px 0px 0px 5px var(--csskit-darkblue-focus);
+}
+
+.cssk-form-text {
+    font-family: 'Georama', sans-serif;
+    font-size: 15px;
+    color: #9fa2a5;
+    margin-top: 5px;
+}
+
+@media screen AND (max-width: 1550px) {
+  .cssk-container {
+    background-color: rgb(251, 251, 251);
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+  }
+  .cssk-form-btn {
+    background-color: var(--csskit-blue-form);
+    border: 1px solid var(--csskit-blue-form);
+    border-radius: 5px;
+    padding: 8px 13px;
+    color: #dadada;
+    font-size: 17px;
+    transition: .3s;
+    width: 100%;
+  }
+}
